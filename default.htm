@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="offline.appcache">
+<head>
+  <meta charset="utf-8"/>
+  <link href="default.css" rel="stylesheet" type="text/css"/>
+  <link rel="shortcut icon" href="favicon.ico"/>
+  <meta name="description" content="A simple app that makes it easy to spell-check with a browser."/>
+  <title>Spell&#x2714;</title>
+</head>
+<body data-bind="event: { dragover: onDragover, drop: onDrop }">
+  <table class="fill">
+    <tr>
+      <td>
+        <header>Spell&#x2714;</header>
+      </td>
+      <td></td>
+      <td class="right">
+        <form>
+          <input type="file" data-bind="event: { change: onFileOpen }"/>
+        </form>
+      </td>
+    </tr>
+    <tr class="fill">
+      <td colspan="3">
+        <textarea class="fill" data-bind="textInput: text" autofocus="autofocus" spellcheck="true"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <select data-bind="options: views, value: selectedView"></select>
+      </td>
+      <td class="center">
+        <footer><a href="#" data-bind="click: onHelpAbout">Help / About</a></footer>
+      </td>
+      <td class="right">
+        <footer>Copyright &copy; 2014 by <a href="http://dlaa.me/">David Anson</a></footer>
+      </td>
+    </tr>
+  </table>
+
+  <script src="knockout-3.2.0.js"></script>
+  <script src="lodash.min.js"></script>
+  <script src="node_modules.min.js"></script>
+  <script src="default.js"></script>
+</body>
+</html>
