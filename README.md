@@ -18,25 +18,28 @@ Spell&#x2714;'s flexible approach stays out of your way and helps avoid unfortun
 
 ## Documentation
 
-> To import text:
-> &bull; Paste from the clipboard
-> &bull; Drag-and-drop from the file system
-> &bull; Open a file (via the button in the top-right corner)
->
-> The view selector (lower-left corner) supports:
-> &bull; Original text
-> &bull; Unique words (sorted)
-> &bull; HTML/XML (text, comments, and attributes)
-> &bull; JSON (values only)
-> &bull; JavaScript (string literals and comments)
->
-> Notes:
-> &bull; Offline use is supported once the app has been cached by the browser
-> &bull; Changes are not saved to the original file; copy/paste any edits you want to keep
-> &bull; Browsers that support the [forceSpellCheck](https://html.spec.whatwg.org/multipage/interaction.html#dom-forcespellcheck) API automatically highlight spelling errors
-> &bull; Internet Explorer highlights automatically if you type in the text box before loading
-> &bull; Chrome highlights automatically because of a selection hack
-> &bull; Firefox highlights automatically
+To import text:
+
+* Paste from the clipboard
+* Drag-and-drop from the file system
+* Open a file (via the button in the top-right corner)
+
+The view selector (lower-left corner) supports:
+
+* Original text
+* Unique words (sorted)
+* HTML/XML (text, comments, and attributes)
+* JSON (values only)
+* JavaScript (string literals and comments)
+
+Notes:
+
+* Offline use is supported once the app has been cached by the browser
+* Changes are not saved to the original file; copy/paste any edits you want to keep
+* Browsers that support the [forceSpellCheck](https://html.spec.whatwg.org/multipage/interaction.html#dom-forcespellcheck) API automatically highlight spelling errors
+* Internet Explorer highlights automatically if you type in the text box before loading
+* Chrome highlights automatically because of a selection hack
+* Firefox highlights automatically
 
 
 ## Credits
