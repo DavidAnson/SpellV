@@ -95,7 +95,7 @@
   function viewUniqueWords(source) {
     var result = _(source.replace(/[^a-zA-Z-']/g, " ").split(" "))
       .map(function normalize(w) {
-        return w.replace(/^-+|-+$/, "");
+        return w.replace(/^[-']+|[-']+$/, "");
       })
       .uniq()
       .sort()
@@ -148,7 +148,7 @@
         .uniq()
         .sort()
         .valueOf()
-        .join(" ");
+        .join("\n");
     } catch (ex) {
       return null;
     }
