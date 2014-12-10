@@ -16,6 +16,11 @@ With a deeper understanding of the structure of your data, it's able to filter o
 Spell&#x2714;'s flexible approach stays out of your way and helps avoid unfortunate typos!
 
 
+## Demonstration
+
+[http://dlaa.me/SpellV/](http://dlaa.me/SpellV/)
+
+
 ## Documentation
 
 To import text:
@@ -42,6 +47,16 @@ Notes:
 * Firefox highlights automatically
 
 
+## Installation
+
+1. `git clone https://github.com/DavidAnson/SpellV.git`
+2. `cd SpellV/Grunt`
+3. `npm install`
+4. `grunt`
+5. Open `default.htm` in a web browser
+  * "Allow blocked content" if prompted by Internet Explorer
+
+
 ## Credits
 
 Spell&#x2714; uses the following technologies:
@@ -53,7 +68,7 @@ Spell&#x2714; uses the following technologies:
 
 Spell&#x2714; is built with the following technologies:
 
-* [Grunt](http://gruntjs.com/) (including [watch](https://github.com/gruntjs/grunt-contrib-watch))
+* [Grunt](http://gruntjs.com/) (including [watch](https://github.com/gruntjs/grunt-contrib-watch) and [grunt-curl](https://github.com/twolfson/grunt-curl))
 * [ESLint](http://eslint.org/) ([via Grunt](https://github.com/sindresorhus/grunt-eslint))
 * [browserify](http://browserify.org/) ([via Grunt](https://github.com/jmreidy/grunt-browserify))
 * [UglifyJS](http://lisperator.net/uglifyjs/) ([via Grunt](https://github.com/gruntjs/grunt-contrib-uglify))
