@@ -27,7 +27,7 @@ To import text:
 
 * Paste from the clipboard
 * Drag-and-drop from the file system
-* Open a file (via the button in the top-right corner)
+* Open a file (via the button at the top right)
 
 The view selector (lower-left corner) supports:
 
@@ -36,6 +36,7 @@ The view selector (lower-left corner) supports:
 * HTML/XML (text, comments, and attributes)
 * JSON (values only)
 * JavaScript (string literals and comments)
+* Markdown (text)
 
 Notes:
 
@@ -65,6 +66,7 @@ Spell&#x2714; uses the following technologies:
 * [Lo-Dash](https://lodash.com/)
 * [htmlparser2](https://github.com/fb55/htmlparser2)
 * [Esprima](http://esprima.org/)
+* [marked](https://github.com/chjj/marked)
 
 Spell&#x2714; is built with the following technologies:
 

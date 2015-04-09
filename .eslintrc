@@ -11,7 +11,8 @@
         "ko":  true,
         "_":  true,
         "esprima": true,
-        "htmlparser2": true
+        "htmlparser2": true,
+        "marked": true
     },
 
     "rules": {

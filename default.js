@@ -10,7 +10,7 @@
   // View model
   var _model = {
     text: ko.observable(""),
-    views: ko.observableArray([ "Original", "Unique words", "HTML/XML content", "JSON content", "JavaScript strings" ]),
+    views: ko.observableArray([ "Original", "Unique words", "HTML/XML content", "JSON content", "JavaScript strings", "Markdown content" ]),
     selectedView: ko.observable(null)
   };
   _model.selectedView.extend({ notify: "always" });
@@ -108,10 +108,13 @@
   }
 
   // Generate HTML content view
-  function viewHtmlContent(source) {
+  function viewHtmlContent(source, ignoreIdAttribute) {
     var strings = [];
     function onstring(first, second) {
-      var string = (second || first).trim();
+      var string = first.trim();
+      if (second) {
+        string = (ignoreIdAttribute && (string === "id")) ? "" : second.trim();
+      }
       if (string) {
         strings.push(string);
       }
@@ -174,6 +177,12 @@
     }
   }
 
+  // Generate Markdown content view
+  function viewMarkdownContent(source) {
+    var html = marked(source);
+    return _.unescape(viewHtmlContent(html, true));
+  }
+
   // Handle file open
   _model.onFileOpen = function onFileOpen(data, evt) {
     if (evt.target && evt.target.files) {
@@ -207,6 +216,9 @@
       case 4:
         newText = viewJavaScriptContent(_text);
         break;
+      case 5:
+        newText = viewMarkdownContent(_text);
+        break;
       default:
         throw new Error("Unexpected view index.");
     }
@@ -236,7 +248,7 @@
       "To import text:",
       "\u2022 Paste from the clipboard",
       "\u2022 Drag-and-drop from the file system",
-      "\u2022 Open a file (via the button in the top-right corner)",
+      "\u2022 Open a file (via the button at the top right)",
       "",
       "The view selector (lower-left corner) supports:",
       "\u2022 Original text",
@@ -244,6 +256,7 @@
       "\u2022 HTML/XML (text, comments, and attributes)",
       "\u2022 JSON (values only)",
       "\u2022 JavaScript (string literals and comments)",
+      "\u2022 Markdown (text)",
       "",
       "Notes:",
       "\u2022 Offline use is supported once the app has been cached by the browser",
