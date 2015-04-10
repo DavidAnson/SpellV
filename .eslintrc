@@ -12,7 +12,7 @@
     "globals": {
         "ko":  true,
         "_":  true,
-        "esprima": true,
+        "espree": true,
         "htmlparser2": true,
         "marked": true
     },

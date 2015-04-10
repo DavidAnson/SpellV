@@ -65,7 +65,7 @@ Spell&#x2714; uses the following technologies:
 * [Knockout](http://knockoutjs.com/)
 * [Lo-Dash](https://lodash.com/)
 * [htmlparser2](https://github.com/fb55/htmlparser2)
-* [Esprima](http://esprima.org/)
+* [Espree](https://github.com/eslint/espree)
 * [marked](https://github.com/chjj/marked)
 
 Spell&#x2714; is built with the following technologies:

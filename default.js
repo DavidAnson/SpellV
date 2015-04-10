@@ -161,7 +161,7 @@
   function viewJavaScriptContent(source) {
     try {
       // Parse
-      var parse = esprima.parse(source, {
+      var parse = espree.parse(source, {
         comment: true,
         tolerant: true
       });
