@@ -80,8 +80,8 @@
         var value = node[key];
         if (Array.isArray(value)) {
           // Visit all array elements
-          value.forEach(function handleArrayElement(value) {
-            visitAllNodes(value, strings);
+          value.forEach(function handleArrayElement(element) {
+            visitAllNodes(element, strings);
           });
         } else {
           // Visit value
