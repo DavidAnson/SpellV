@@ -18,11 +18,11 @@ module.exports = function(grunt) {
     "curl-dir": {
       "..": [
         // http://knockoutjs.com/
-        "http://knockoutjs.com/downloads/knockout-3.2.0.js",
-        "http://knockoutjs.com/downloads/knockout-3.2.0.debug.js",
+        "http://knockoutjs.com/downloads/knockout-3.3.0.js",
+        "http://knockoutjs.com/downloads/knockout-3.3.0.debug.js",
         // https://lodash.com/
-        "https://raw.github.com/lodash/lodash/2.4.1/dist/lodash.min.js",
-        "https://raw.github.com/lodash/lodash/2.4.1/dist/lodash.js"
+        "https://raw.github.com/lodash/lodash/3.6.0/lodash.min.js",
+        "https://raw.github.com/lodash/lodash/3.6.0/lodash.js"
       ]
     },
 
@@ -62,5 +62,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-curl");
   grunt.loadNpmTasks("grunt-eslint");
 
-  grunt.registerTask("default", ["browserify", "curl-dir", "uglify", "eslint", "watch"]);
+  grunt.registerTask("default", ["browserify", "curl-dir", "uglify", "eslint"]);
 };
