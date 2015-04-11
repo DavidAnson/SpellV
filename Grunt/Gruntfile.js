@@ -15,6 +15,13 @@ module.exports = function(grunt) {
       }
     },
 
+    clean: {
+      files: ["../knockout-*js", "../lodash.*js", "../node_modules.*js"],
+      options: {
+        force: true
+      }
+    },
+
     "curl-dir": {
       "..": [
         // http://knockoutjs.com/
@@ -57,6 +64,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks("grunt-browserify");
+  grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-curl");
