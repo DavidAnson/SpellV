@@ -173,7 +173,7 @@
       });
       return strings.join("\n");
     } catch (ex) {
-      return null;
+      return "[JavaScript parse error: " + ex.message + "]";
     }
   }
 
@@ -225,7 +225,7 @@
     if (newText === null) {
       newText = "[Content unsupported by current view]";
     }
-    updateText(newText.trim() + "\n");
+    updateText(newText.trim());
   }
 
   // Handle drag-and-drop
@@ -265,7 +265,7 @@
       "\u2022 Internet Explorer highlights automatically if you type in the text box before loading",
       "\u2022 Chrome highlights automatically because of a selection hack",
       "\u2022 Firefox highlights automatically"
-  ];
+    ];
     loadText(message.join("\n"));
     return false;
   };
